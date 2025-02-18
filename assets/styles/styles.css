@@ -40,14 +40,13 @@ h2 {
 h3 {
   font-size: 3rem;
   color: var(--color-titulo);
-  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  /* animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite; */
   width: 0;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
   /* font-family: "Courier New"; */
-  border-right: 0.15em solid #18bdec;
-  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  border-right: 0.15em solid #18bdec;  
 }
 
 p {
@@ -118,6 +117,12 @@ img {
   border-left: 4px dotted black; /* Línea punteada */
   transform: translateX(-50%);
   margin: 5px 0;
+}
+
+.ubi {
+  text-decoration: none;
+  color: var(--color-titulo);
+  font-weight: bold;
 }
 
 /* ANIMACIONES */
@@ -287,4 +292,19 @@ img {
   50% {
     border-color: transparent;
   }
+}
+
+.typing  {
+  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+
+
+@keyframes pulse {
+  0%, 50%, 100% { transform: scale(1, 1); }
+  30%, 80% { transform: scale(0.92, 0.95); }
+}
+
+
+.pulse {
+  animation: pulse 2s infinite;
 }
